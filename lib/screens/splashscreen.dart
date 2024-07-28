@@ -1,5 +1,6 @@
 import 'package:clothstore_webview_app/components/loading_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import '../webview.dart';
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _SplashState extends State<Splash> {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const LoadingPage()),
+        PageTransition(type: PageTransitionType.fade, child:  const LoadingPage()),
       );
     });
   }
@@ -23,7 +24,6 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF3D3D3),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,6 +32,7 @@ class _SplashState extends State<Splash> {
               'assets/clothstore-logo.png',
               height: 50,
             ),
+            Image.asset('assets/Stylish_text.png', height: 50,),
           ],
         ),
       ),

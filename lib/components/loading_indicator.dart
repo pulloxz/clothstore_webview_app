@@ -1,6 +1,8 @@
 import 'package:clothstore_webview_app/webview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+
 
 class LoadingIndicator extends StatelessWidget {
   const LoadingIndicator({super.key});
@@ -40,13 +42,13 @@ class _LoadingPageState extends State<LoadingPage> {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const WebViewApp()),
+        PageTransition(type: PageTransitionType.fade, child:  const WebViewApp()),
+
       );
     });
   }
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: const Color(0xFFF3D3D3),
       body: Center(child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

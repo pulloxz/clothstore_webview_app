@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+
 class WebViewApp extends StatefulWidget {
   const WebViewApp({super.key});
 
@@ -26,10 +27,11 @@ class _WebViewAppState extends State<WebViewApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: WebViewWidget(
+      body: Container(
+        color: Colors.white,
+        child: SafeArea(child: WebViewWidget(
           controller: controller,
-        ),
+        ),),
       ),
     );
   }
