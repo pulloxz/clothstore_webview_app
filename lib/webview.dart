@@ -20,7 +20,7 @@ class _WebViewAppState extends State<WebViewApp> {
     controller = WebViewController();
     controller.setJavaScriptMode(JavaScriptMode.unrestricted);
     controller.loadRequest(
-      Uri.parse('https://66a62d62b95c2e14c8c9865f--extraordinary-alfajores-5bd0b2.netlify.app'),
+      Uri.parse('https://heartfelt-choux-58bb66.netlify.app'),
     );
   }
 
